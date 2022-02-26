@@ -24,7 +24,11 @@ public class MoveToGoalAgent : Agent {
 
 
         //
-        transform.localPosition = Vector3.zero;
+        transform.localPosition = new Vector3(Random.Range(-3f, +1f), 0, Random.Range(-2f, 2f));
+
+        //
+        targetTransform.localPosition = new Vector3(Random.Range(-4f, +4f), -1.5f, Random.Range(-3.5f, 3.5f));
+
 
     }
 

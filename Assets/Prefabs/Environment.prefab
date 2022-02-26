@@ -126,7 +126,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: 3f94a9d6ddde406408cf7e7723c63dbe, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 2
+  m_BehaviorType: 0
   m_BehaviorName: MoveToGoal
   TeamId: 0
   m_UseChildSensors: 1
