@@ -32,7 +32,7 @@ public class MoveToGoalAgent : Agent {
 
     }
 
-    
+    //
     public override void CollectObservations(VectorSensor sensor) {
 
         //
@@ -107,7 +107,6 @@ public class MoveToGoalAgent : Agent {
             EndEpisode();
 
         }
-
 
 
 

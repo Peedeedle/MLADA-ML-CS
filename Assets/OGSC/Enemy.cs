@@ -37,7 +37,18 @@ public class Enemy : MonoBehaviour{
     public void GetShot(int damage) {
 
         //
-        ApplyDamage(damage);
+        currentHealth -= damage;
+
+        //
+        if (currentHealth <= 0) {
+
+            //
+            Die();
+
+        }
+
+        //
+        //ApplyDamage(damage);
 
     }
 

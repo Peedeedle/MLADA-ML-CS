@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1646041926",
+        "python_version": "3.7.9 (tags/v3.7.9:13c94747c7, Aug 17 2020, 18:58:18) [MSC v.1900 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\jackl\\Documents\\GitHub\\MLADA-ML-CS\\venv\\Scripts\\mlagents-learn config/CT_T_Behaviour.yaml --run-id=InitialCT_T_Test --resume",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.0+cu110",
+        "numpy_version": "1.21.5",
+        "end_time_seconds": "1646041935"
+    },
+    "total": 8.6288738,
+    "count": 1,
+    "self": 0.00983139999999949,
+    "children": {
+        "run_training.setup": {
+            "total": 0.12370449999999988,
+            "count": 1,
+            "self": 0.12370449999999988
+        },
+        "TrainerController.start_learning": {
+            "total": 8.495337899999999,
+            "count": 1,
+            "self": 0.0001680999999997823,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 7.8087057,
+                    "count": 1,
+                    "self": 7.8087057
+                },
+                "TrainerController._save_models": {
+                    "total": 0.6864641000000002,
+                    "count": 1,
+                    "self": 0.022325399999999718,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.6641387000000005,
+                            "count": 1,
+                            "self": 0.6641387000000005
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

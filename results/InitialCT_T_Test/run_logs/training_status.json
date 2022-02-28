@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    },
+    "CT_T_Behaviour": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\InitialCT_T_Test\\CT_T_Behaviour\\CT_T_Behaviour-0.onnx",
+                "reward": null,
+                "creation_time": 1646041935.0138586,
+                "auxillary_file_paths": [
+                    "results\\InitialCT_T_Test\\CT_T_Behaviour\\CT_T_Behaviour-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\InitialCT_T_Test\\CT_T_Behaviour.onnx",
+            "reward": null,
+            "creation_time": 1646041935.0138586,
+            "auxillary_file_paths": [
+                "results\\InitialCT_T_Test\\CT_T_Behaviour\\CT_T_Behaviour-0.pt"
+            ]
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "CTBehaviour": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\ppo\\CTBehaviour\\CTBehaviour-0.onnx",
+                "reward": null,
+                "creation_time": 1646038821.3963816,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CTBehaviour\\CTBehaviour-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\ppo\\CTBehaviour\\CTBehaviour-0.onnx",
+                "reward": null,
+                "creation_time": 1646039465.8583875,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CTBehaviour\\CTBehaviour-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\ppo\\CTBehaviour\\CTBehaviour-0.onnx",
+                "reward": null,
+                "creation_time": 1646040594.8270333,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CTBehaviour\\CTBehaviour-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\ppo\\CTBehaviour\\CTBehaviour-0.onnx",
+                "reward": null,
+                "creation_time": 1646041038.7237356,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CTBehaviour\\CTBehaviour-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\ppo\\CTBehaviour.onnx",
+            "reward": null,
+            "creation_time": 1646041038.7237356,
+            "auxillary_file_paths": [
+                "results\\ppo\\CTBehaviour\\CTBehaviour-0.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
