@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour{
+public class OGSCEnemy : MonoBehaviour{
 
     //
     public int startingHealth = 100;

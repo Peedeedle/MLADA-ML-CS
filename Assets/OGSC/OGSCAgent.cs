@@ -40,15 +40,23 @@ public class OGSCAgent : Agent{
     //
     private Rigidbody rb;
 
+    public float rotationSpeed = 3f;
+
+    public GameObject collectable1;
+
+
+
     //
     public override void OnEpisodeBegin() {
 
+        //
+        collectable1.SetActive(true);
 
         //
-        transform.localPosition = new Vector3(Random.Range(3f, -3f), 0, Random.Range(-2f, -3.5f));
+        transform.localPosition = new Vector3(Random.Range(3f, -3f), 0, Random.Range(-2f, -3f));
 
         //
-        targetTransform.localPosition = new Vector3(Random.Range(3.5f, -3.5f), 0f, Random.Range(3.5f, 2f));
+        targetTransform.localPosition = new Vector3(Random.Range(3f, -3f), 0f, Random.Range(3f, 2f));
 
 
     }
@@ -56,6 +64,10 @@ public class OGSCAgent : Agent{
     //
     public override void OnActionReceived(ActionBuffers actions) {
 
+        
+        //
+        // 6 Vector Space Size
+        //
         //
         float moveX = actions.ContinuousActions[0];
 
@@ -67,6 +79,30 @@ public class OGSCAgent : Agent{
 
         //
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
+
+
+
+        transform.Rotate(Vector3.up, actions.ContinuousActions[1] * rotationSpeed);
+
+
+        //
+        //float rotateX = actions.ContinuousActions[2];
+
+        //
+        //float rotateZ = actions.ContinuousActions[3];
+
+        //
+        //float rotateY = actions.ContinuousActions[0];
+
+        //
+        //float rotateSpeed = 3f;
+
+        //
+        //transform.rotation = Quaternion.Euler(0, rotateY * rotateSpeed, 0);
+
+        //
+        //transform.rotation = new Vector3(rotateX, 0, rotateZ) * Time.deltaTime * rotateSpeed;
+
 
         /*
         //
@@ -93,6 +129,18 @@ public class OGSCAgent : Agent{
         continousActions[1] = Input.GetAxisRaw("Vertical");
 
         //
+        //continousActions[0] = transform.rotation.y;
+
+        //
+        //continousActions[3] = transform.rotation.z;
+
+        //
+        //continousActions[3] = transform.Rotate(0f, -Input.GetAxisRaw("Horizontal") * rotateSpeed, 0f);
+
+        //
+        //continousActions[4] = Input.GetAxisRaw("Vertical");
+
+        //
         //continousActions[2] = Input.GetKey("P") ? 1f : 0f;
 
     }
@@ -102,6 +150,9 @@ public class OGSCAgent : Agent{
 
         //
         sensor.AddObservation(transform.localPosition);
+
+        //
+        //sensor.AddObservation(transform.rotation.y);
 
         //
         sensor.AddObservation(targetTransform.localPosition);
@@ -115,21 +166,26 @@ public class OGSCAgent : Agent{
         var layerMask = 1 << LayerMask.NameToLayer("Enemy");
 
         //
-        Debug.DrawRay(shootingPoint.position, Vector3.forward * 30f, Color.green, 2f);
+        var direction = transform.forward;
 
         //
-        if (Physics.Raycast(shootingPoint.position, Vector3.forward, out var hit, 200f, layerMask)) {
+        Debug.DrawRay(shootingPoint.position, direction * 2f, Color.green, 2f);
+
+        //
+        if (Physics.Raycast(shootingPoint.position, direction, out var hit, 2f, layerMask)) {
 
             //
             Debug.Log("HIT ENEMY");
 
             //
-            SetReward(+1f);
+            SetReward(+2f);
 
             //
             EndEpisode();
 
         }
+
+
 
         /*
         if (MaxStep >= 500000) {
@@ -150,6 +206,7 @@ public class OGSCAgent : Agent{
 
     }
 
+    /*
     //
     private void Shoot() {
 
@@ -171,18 +228,18 @@ public class OGSCAgent : Agent{
         Debug.Log("Shot");
 
         //
-        Debug.DrawRay(shootingPoint.position, direction * 200f, Color.green, 2f);
+        Debug.DrawRay(shootingPoint.position, direction * 20f, Color.blue, 2f);
 
         //
-        if (Physics.Raycast(shootingPoint.position, direction, out var hit, 200f, layerMask)) {
+        if (Physics.Raycast(shootingPoint.position, direction, out var hit, 20f, layerMask)) {
 
             Debug.Log("HIT ENEMY");
 
             //
-            hit.transform.GetComponent<Enemy>().GetShot(damage);//, this);
+            //hit.transform.GetComponent<Enemy>().GetShot(damage);//, this);
 
             //
-            SetReward(+1f);
+            AddReward(+1f);
 
             //
             EndEpisode();
@@ -197,7 +254,7 @@ public class OGSCAgent : Agent{
 
 
     }
-
+    */
     
     //
     private void OnTriggerEnter(Collider other) {
@@ -216,6 +273,25 @@ public class OGSCAgent : Agent{
 
             //
             EndEpisode();
+
+        }
+
+        //
+        if (other.TryGetComponent<OGSCCollectable>(out OGSCCollectable OGSCcollectable)) {
+
+            //
+            SetReward(1f);
+
+            //
+            collectable1.SetActive(false);
+
+            Debug.Log("HIT COLLECTABLE");
+
+            //
+            //floorMeshRenderer.material = loseMaterial;
+
+            //
+            //EndEpisode();
 
         }
 
