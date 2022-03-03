@@ -1,0 +1,29 @@
+{
+    "OGSC": {
+        "checkpoints": [
+            {
+                "steps": 50019,
+                "file_path": "results\\OGSCTest\\OGSC\\OGSC-50019.onnx",
+                "reward": null,
+                "creation_time": 1646213914.1323617,
+                "auxillary_file_paths": [
+                    "results\\OGSCTest\\OGSC\\OGSC-50019.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 50019,
+            "file_path": "results\\OGSCTest\\OGSC.onnx",
+            "reward": null,
+            "creation_time": 1646213914.1323617,
+            "auxillary_file_paths": [
+                "results\\OGSCTest\\OGSC\\OGSC-50019.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

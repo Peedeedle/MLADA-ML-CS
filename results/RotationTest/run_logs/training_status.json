@@ -1,0 +1,29 @@
+{
+    "OGSC": {
+        "checkpoints": [
+            {
+                "steps": 50007,
+                "file_path": "results\\RotationTest\\OGSC\\OGSC-50007.onnx",
+                "reward": null,
+                "creation_time": 1646217140.7719767,
+                "auxillary_file_paths": [
+                    "results\\RotationTest\\OGSC\\OGSC-50007.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 50007,
+            "file_path": "results\\RotationTest\\OGSC.onnx",
+            "reward": null,
+            "creation_time": 1646217140.7719767,
+            "auxillary_file_paths": [
+                "results\\RotationTest\\OGSC\\OGSC-50007.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

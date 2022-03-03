@@ -1,0 +1,29 @@
+{
+    "OGSC": {
+        "checkpoints": [
+            {
+                "steps": 40494,
+                "file_path": "results\\BasicsTest\\OGSC\\OGSC-40494.onnx",
+                "reward": null,
+                "creation_time": 1646216262.8028092,
+                "auxillary_file_paths": [
+                    "results\\BasicsTest\\OGSC\\OGSC-40494.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 40494,
+            "file_path": "results\\BasicsTest\\OGSC.onnx",
+            "reward": null,
+            "creation_time": 1646216262.8028092,
+            "auxillary_file_paths": [
+                "results\\BasicsTest\\OGSC\\OGSC-40494.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

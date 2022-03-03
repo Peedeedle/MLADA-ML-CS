@@ -14,10 +14,12 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class OGSCAgent : Agent{
+public class OGSCAgent : Agent
+{
 
     //
     [SerializeField] private Transform targetTransform;
+
 
     //
     public Transform shootingPoint;
@@ -29,10 +31,10 @@ public class OGSCAgent : Agent{
     public int damage = 100;
 
     //
-    private bool bShotAvailable = true;
+    //private bool bShotAvailable = true;
 
     //
-    private int stepsUntilShotAvailable = 0;
+    //private int stepsUntilShotAvailable = 0;
 
     //
     private Vector3 startingPosition;
@@ -50,13 +52,13 @@ public class OGSCAgent : Agent{
     public override void OnEpisodeBegin() {
 
         //
-        collectable1.SetActive(true);
+        //collectable1.SetActive(true);
 
         //
-        transform.localPosition = new Vector3(Random.Range(3f, -3f), 0, Random.Range(-2f, -3f));
+        transform.localPosition = new Vector3(Random.Range(33f, 16f), 0, Random.Range(0f, 5f));
 
         //
-        targetTransform.localPosition = new Vector3(Random.Range(3f, -3f), 0f, Random.Range(3f, 2f));
+        targetTransform.localPosition = new Vector3(Random.Range(33f, 23f), 1.5f, -7.5f);
 
 
     }
@@ -64,7 +66,7 @@ public class OGSCAgent : Agent{
     //
     public override void OnActionReceived(ActionBuffers actions) {
 
-        
+
         //
         // 6 Vector Space Size
         //
@@ -75,14 +77,16 @@ public class OGSCAgent : Agent{
         float moveZ = actions.ContinuousActions[1];
 
         //
-        float moveSpeed = 3f;
+        float moveSpeed = 2f;
 
         //
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
 
 
 
-        transform.Rotate(Vector3.up, actions.ContinuousActions[1] * rotationSpeed);
+        //transform.Rotate(Vector3.up, actions.DiscreteActions[1] * rotationSpeed);
+
+        //transform.Rotate(Vector3.down, actions.DiscreteActions[1] * rotationSpeed);
 
 
         //
@@ -123,10 +127,16 @@ public class OGSCAgent : Agent{
         ActionSegment<float> continousActions = actionsOut.ContinuousActions;
 
         //
+        //ActionSegment<float> continousActions = actionsOut.ContinuousActions;
+
+        //
         continousActions[0] = Input.GetAxisRaw("Horizontal");
 
         //
         continousActions[1] = Input.GetAxisRaw("Vertical");
+
+        //
+        //discreteActions[2] = transform.rotation.y = (int)Input.GetAxisRaw("Vertical");
 
         //
         //continousActions[0] = transform.rotation.y;
@@ -157,6 +167,7 @@ public class OGSCAgent : Agent{
         //
         sensor.AddObservation(targetTransform.localPosition);
 
+
     }
 
     //
@@ -169,10 +180,10 @@ public class OGSCAgent : Agent{
         var direction = transform.forward;
 
         //
-        Debug.DrawRay(shootingPoint.position, direction * 2f, Color.green, 2f);
+        Debug.DrawRay(shootingPoint.position, direction * 20f, Color.green, 20f);
 
         //
-        if (Physics.Raycast(shootingPoint.position, direction, out var hit, 2f, layerMask)) {
+        if (Physics.Raycast(shootingPoint.position, direction, out var hit, 20f, layerMask)) {
 
             //
             Debug.Log("HIT ENEMY");
@@ -180,12 +191,20 @@ public class OGSCAgent : Agent{
             //
             SetReward(+2f);
 
+
             //
             EndEpisode();
 
         }
 
+        /*
+        if (!targetTransform1 && !targetTransform2 && !targetTransform3 && !targetTransform4 && !targetTransform5) {
 
+            Debug.Log("ALLTARGETSDEAD");
+
+            EndEpisode();
+        }
+        */
 
         /*
         if (MaxStep >= 500000) {
@@ -255,7 +274,7 @@ public class OGSCAgent : Agent{
 
     }
     */
-    
+
     //
     private void OnTriggerEnter(Collider other) {
 
@@ -276,6 +295,7 @@ public class OGSCAgent : Agent{
 
         }
 
+        /*
         //
         if (other.TryGetComponent<OGSCCollectable>(out OGSCCollectable OGSCcollectable)) {
 
@@ -294,10 +314,11 @@ public class OGSCAgent : Agent{
             //EndEpisode();
 
         }
+        */
 
     }
-    
 
+    /*
     //
     private void FixedUpdate() {
 
@@ -318,6 +339,8 @@ public class OGSCAgent : Agent{
         }
 
     }
+    */
+    
 
     /*
     //

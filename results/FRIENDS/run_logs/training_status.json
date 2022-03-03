@@ -1,0 +1,29 @@
+{
+    "OGSC": {
+        "checkpoints": [
+            {
+                "steps": 50011,
+                "file_path": "results\\FRIENDS\\OGSC\\OGSC-50011.onnx",
+                "reward": 1.2999999995032947,
+                "creation_time": 1646310712.28975,
+                "auxillary_file_paths": [
+                    "results\\FRIENDS\\OGSC\\OGSC-50011.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 50011,
+            "file_path": "results\\FRIENDS\\OGSC.onnx",
+            "reward": 1.2999999995032947,
+            "creation_time": 1646310712.28975,
+            "auxillary_file_paths": [
+                "results\\FRIENDS\\OGSC\\OGSC-50011.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

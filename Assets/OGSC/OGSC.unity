@@ -226,8 +226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67388617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33, y: -1, z: 0.45}
-  m_LocalScale: {x: 5.1633816, y: 3.42605, z: 2}
+  m_LocalPosition: {x: 10.3653, y: -1, z: 0.45}
+  m_LocalScale: {x: 3.7651255, y: 3.42605, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -587,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662597585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.41, y: -0.22, z: 0.6}
+  m_LocalPosition: {x: 14.19, y: -0.22, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1010,13 +1010,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240335744}
-  m_LocalRotation: {x: -0, y: 0.9684369, z: -0.24925897, w: 0}
-  m_LocalPosition: {x: -0.08, y: 2.59, z: 5.86}
+  m_LocalRotation: {x: 0.2075753, y: -0.67595303, z: 0.20757535, w: 0.67595303}
+  m_LocalPosition: {x: 5.98, y: 3.53, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.867, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.142, y: -90, z: 0}
 --- !u!1 &1469763418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 6
+    VectorObservationSize: 1
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 4
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 3
   m_BehaviorType: 0
-  m_BehaviorName: CT_T_Behaviour
+  m_BehaviorName: OGSC
   TeamId: 0
   m_UseChildSensors: 0
   m_UseChildActuators: 1
@@ -1622,7 +1622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143094424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0, z: 3.13}
+  m_LocalPosition: {x: 0.08, y: -0.251, z: 3.13}
   m_LocalScale: {x: 0.25, y: 1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1642,7 +1642,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &2143094430
 MonoBehaviour:

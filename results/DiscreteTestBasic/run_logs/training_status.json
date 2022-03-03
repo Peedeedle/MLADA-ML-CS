@@ -1,0 +1,29 @@
+{
+    "OGSC": {
+        "checkpoints": [
+            {
+                "steps": 5039,
+                "file_path": "results\\DiscreteTestBasic\\OGSC\\OGSC-5039.onnx",
+                "reward": null,
+                "creation_time": 1646220081.9386377,
+                "auxillary_file_paths": [
+                    "results\\DiscreteTestBasic\\OGSC\\OGSC-5039.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5039,
+            "file_path": "results\\DiscreteTestBasic\\OGSC.onnx",
+            "reward": null,
+            "creation_time": 1646220081.9386377,
+            "auxillary_file_paths": [
+                "results\\DiscreteTestBasic\\OGSC\\OGSC-5039.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
