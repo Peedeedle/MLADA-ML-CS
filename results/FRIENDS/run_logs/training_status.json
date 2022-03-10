@@ -2,22 +2,22 @@
     "OGSC": {
         "checkpoints": [
             {
-                "steps": 50011,
-                "file_path": "results\\FRIENDS\\OGSC\\OGSC-50011.onnx",
-                "reward": 1.2999999995032947,
-                "creation_time": 1646310712.28975,
+                "steps": 8494,
+                "file_path": "results\\FRIENDS\\OGSC\\OGSC-8494.onnx",
+                "reward": -5.0,
+                "creation_time": 1646475960.0417957,
                 "auxillary_file_paths": [
-                    "results\\FRIENDS\\OGSC\\OGSC-50011.pt"
+                    "results\\FRIENDS\\OGSC\\OGSC-8494.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 50011,
+            "steps": 8494,
             "file_path": "results\\FRIENDS\\OGSC.onnx",
-            "reward": 1.2999999995032947,
-            "creation_time": 1646310712.28975,
+            "reward": -5.0,
+            "creation_time": 1646475960.0417957,
             "auxillary_file_paths": [
-                "results\\FRIENDS\\OGSC\\OGSC-50011.pt"
+                "results\\FRIENDS\\OGSC\\OGSC-8494.pt"
             ]
         }
     },

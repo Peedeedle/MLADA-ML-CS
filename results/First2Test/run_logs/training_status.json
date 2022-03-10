@@ -1,0 +1,51 @@
+{
+    "OGSCT": {
+        "checkpoints": [
+            {
+                "steps": 10187,
+                "file_path": "results\\First2Test\\OGSCT\\OGSCT-10187.onnx",
+                "reward": 0.8831168831168831,
+                "creation_time": 1646562634.231022,
+                "auxillary_file_paths": [
+                    "results\\First2Test\\OGSCT\\OGSCT-10187.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10187,
+            "file_path": "results\\First2Test\\OGSCT.onnx",
+            "reward": 0.8831168831168831,
+            "creation_time": 1646562634.231022,
+            "auxillary_file_paths": [
+                "results\\First2Test\\OGSCT\\OGSCT-10187.pt"
+            ]
+        }
+    },
+    "OGSCCT": {
+        "checkpoints": [
+            {
+                "steps": 10183,
+                "file_path": "results\\First2Test\\OGSCCT\\OGSCCT-10183.onnx",
+                "reward": 0.8470588235294118,
+                "creation_time": 1646562634.325758,
+                "auxillary_file_paths": [
+                    "results\\First2Test\\OGSCCT\\OGSCCT-10183.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10183,
+            "file_path": "results\\First2Test\\OGSCCT.onnx",
+            "reward": 0.8470588235294118,
+            "creation_time": 1646562634.325758,
+            "auxillary_file_paths": [
+                "results\\First2Test\\OGSCCT\\OGSCCT-10183.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}

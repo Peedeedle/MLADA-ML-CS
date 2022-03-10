@@ -8,6 +8,8 @@ TagManager:
   - agent
   - wall
   - ground
+  - CT
+  - T
   layers:
   - Default
   - TransparentFX
@@ -17,10 +19,10 @@ TagManager:
   - UI
   - Agent
   - Collectable
-  - 
-  - 
-  - 
-  - 
+  - T
+  - CT
+  - Wall
+  - Ground
   - 
   - 
   - 
